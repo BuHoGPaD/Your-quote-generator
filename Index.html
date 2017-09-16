@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Your quote generator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">        
+        <script async type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+        <script defer type="text/javascript" src="scripts.js"></script>
+    </head>
+    <body class="container-fluid background-gradient">
+        <h2>Your favourite quotes</h2>
+        <div data-bing="visible: visibleRandomQuoteBlock() > 0">
+            <h3>Random quote generator</h3>
+            <ul class="list-group hidden">
+                <li class="list-group-item"><p id="randomQuoteText"></p></li>
+                <li class="list-group-item"><p id="randomQuoteAuthor"></p></li>
+                <li class="list-group-item"><p><a id="randomQuoteLink" href="#"></a></p></li>
+            </ul>
+        </div>
+        <button type="button" class="btn-primary btn-sm" data-bind="click: getQuote">Get random quote</button>
+        <button type="button" class="btn-success btn-sm" data-bind="click: addQuote">Add quote to Favourites</button>
+        <table class="table table-hover table-condensed table-responsive">
+            <thead>
+                <tr>
+                    <th>Author</th>
+                    <th>Quote</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: quotesArray">
+                <tr>
+                    <td data-bind="text: quoteAuthor">toDo</td>
+                    <td data-bind="text: quoteText">toDo</td>
+                    <td data-bind="text: quoteLink">toDo</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
